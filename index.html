@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>to do list</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Todo List</title>
 </head>
 <body>
-    <header> 
-        <h1>Lista cose da fare</h1>
-    </header>
-<main>
-    <section>
+    <div id="app">
+        <header></header>
+        <section class="todo-list">
+            <h1>cose da fare</h1>
+            <ul class="todo-list">
+                <li class="list-item" v-for="item in todoList" :class="{ 'done': item.done }">
+                    {{ item.text }}
+                </li>
+            </ul>
+        </section>
+    </div>
 
-    </section>
-
-
-
-</main>
+<script src="https://unpkg.com/vue@3.2.20/dist/vue.global.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
